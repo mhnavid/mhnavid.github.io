@@ -62,6 +62,34 @@ const About = () => {
                 <line x1="55" y1="72" x2="85" y2="75" stroke="rgba(155, 93, 229, 0.5)" strokeWidth="2" strokeLinecap="round"/>
                 <line x1="115" y1="75" x2="145" y2="72" stroke="rgba(155, 93, 229, 0.5)" strokeWidth="2" strokeLinecap="round"/>
 
+                {/* Eyeglasses */}
+                <g className="eyeglasses">
+                  {/* Left lens frame */}
+                  <circle cx="70" cy="85" r="22" fill="none" stroke="rgba(155, 93, 229, 0.8)" strokeWidth="2.5"/>
+                  <circle cx="70" cy="85" r="22" fill="rgba(155, 93, 229, 0.05)"/>
+
+                  {/* Right lens frame */}
+                  <circle cx="130" cy="85" r="22" fill="none" stroke="rgba(155, 93, 229, 0.8)" strokeWidth="2.5"/>
+                  <circle cx="130" cy="85" r="22" fill="rgba(155, 93, 229, 0.05)"/>
+
+                  {/* Bridge */}
+                  <path d="M 92 85 Q 100 82 108 85" fill="none" stroke="rgba(155, 93, 229, 0.8)" strokeWidth="2.5" strokeLinecap="round"/>
+
+                  {/* Left temple */}
+                  <line x1="48" y1="85" x2="35" y2="82" stroke="rgba(155, 93, 229, 0.8)" strokeWidth="2.5" strokeLinecap="round"/>
+
+                  {/* Right temple */}
+                  <line x1="152" y1="85" x2="165" y2="82" stroke="rgba(155, 93, 229, 0.8)" strokeWidth="2.5" strokeLinecap="round"/>
+
+                  {/* Lens reflection effect - left */}
+                  <path d="M 58 78 Q 65 75 72 78" fill="none" stroke="rgba(0, 245, 255, 0.4)" strokeWidth="1.5" strokeLinecap="round"/>
+                  <path d="M 60 95 Q 67 92 74 95" fill="none" stroke="rgba(0, 245, 255, 0.3)" strokeWidth="1" strokeLinecap="round"/>
+
+                  {/* Lens reflection effect - right */}
+                  <path d="M 118 78 Q 125 75 132 78" fill="none" stroke="rgba(0, 245, 255, 0.4)" strokeWidth="1.5" strokeLinecap="round"/>
+                  <path d="M 120 95 Q 127 92 134 95" fill="none" stroke="rgba(0, 245, 255, 0.3)" strokeWidth="1" strokeLinecap="round"/>
+                </g>
+
                 {/* Nose */}
                 <line x1="100" y1="90" x2="100" y2="115" stroke="rgba(0, 245, 255, 0.4)" strokeWidth="1.5"/>
                 <line x1="90" y1="115" x2="100" y2="115" stroke="rgba(0, 245, 255, 0.4)" strokeWidth="1.5"/>
