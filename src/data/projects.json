@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "Intelligent Revenue Management Platform for Tolling",
+      "description": "A real-time toll collection and management system that uses CCTV image analysis to recognize license plates and vehicle categories, with integrated reporting modules for comprehensive operational insights.",
+      "tech": ["Node.js", "Express.js", "React.js", "PostgreSQL", "MinIO", "RabbitMQ", "Python", "Flask", "Docker", "WebSocket", "Microservices"]
+    },
+    {
+      "name": "PHALAK — Bangla Vehicle Number Plate Recognition",
+      "description": " A real-time Bangla vehicle number plate recognition system capable of detecting various local vehicle types, colors, and BRTA-standard plates. Leveraged ML & DL models and GPU acceleration for efficient processing and high accuracy.",
+      "tech": ["TensorFlow", "CUDA", "Python", "Node.js", "React.js", "Apache Kafka", "OpenCV", "OCR", "REST APIs"]
+    },
+    {
+      "name": "AI-Powered Online Exam Proctoring Platform",
+      "description": "Computer vision system achieving 93% detection accuracy for online examination monitoring.",
+      "tech": ["Python", "YOLO", "OpenCV", "Flask", "Docker", "Computer Vision"]
+    },
+    {
+      "name": "City Surveillance System with Video Analytics",
+      "description": "ANPR dashboard for Bengali number plates processing multiple live CCTV feeds with fuzzy search and queue management.",
+      "tech": ["Node.js", "React.js", "PostgreSQL", "ZeroMQ", "Microservices", "Trigram Indexing", "Fuzzy Search"]
+    },
+    {
+      "name": "MEED Banking Platform with eKYC and Fraud Detection",
+      "description": "Customer onboarding with ML-based identity verification, fraud detection, OFAC compliance, and multi-country fund transfers.",
+      "tech": ["Node.js", "MongoDB", "AWS", "Jest", "ML", "Identity Verification", "REST APIs"]
+    },
+    {
+      "name": "End-to-End RAG Pipeline",
+      "description": "High-precision Retrieval-Augmented Generation system for context-aware AI responses at scale.",
+      "tech": ["LangChain", "Vector Databases", "LLMs", "Docker", "Make", "Python"]
+    },
+    {
+      "name": "Sign Language Recognition System",
+      "description": "Real-time hand gesture to natural language and animation translation with HamNoSys-based mapping.",
+      "tech": ["PyTorch", "Python", "HamNoSys", "ML Pipelines", "Data Annotation"]
+    },
+    {
+      "name": "Airways Ticket Reservation RPA Agent",
+      "description": "A Robotic Process Automation (RPA)-driven solution that automates the entire ticket booking process, handling tasks from login to ticket download, and is designed to streamline booking workflows across multiple airline systems.",
+      "tech": ["Python", "Selenium", "Flask", "Beautiful Soup", "Docker"]
+    }
+  ]
+}

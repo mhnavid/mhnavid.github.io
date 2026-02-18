@@ -1,0 +1,118 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.heroSubtitle {
+  margin-top: 2rem;
+  min-height: 60px;
+}
+
+.typewriter {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--accent-cyan);
+  letter-spacing: 2px;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 30px;
+  color: var(--text-primary);
+  background: rgba(0, 245, 255, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: rgba(0, 245, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 245, 255, 0.3);
+}
+
+.socialIcon {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent-cyan);
+}
+
+.socialName {
+  font-size: 0.9rem;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scrollIndicator:hover {
+  color: var(--accent-cyan);
+}
+
+.scrollText {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scrollChevron {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollChevron {
+    animation: none;
+  }
+  .cursor {
+    animation: none;
+  }
+}

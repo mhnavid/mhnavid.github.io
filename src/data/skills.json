@@ -1,0 +1,51 @@
+{
+  "categories": [
+    {
+      "name": "Backend",
+      "color": "#00f5ff",
+      "skills": [
+        "Python", "Flask", "FastAPI", "TypeScript", "JavaScript", "Node.js",
+        "Express.js", "RabbitMQ", "ZeroMQ", "Boto3", "MinIO", "OpenCV",
+        "Apache Airflow"
+      ]
+    },
+    {
+      "name": "AI / ML",
+      "color": "#9b5de5",
+      "skills": [
+        "GenAI", "RAG", "PyTorch", "YOLO", "LangChain", "OpenAI",
+        "Spark NLP", "N8n"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "color": "#f7b731",
+      "skills": [
+        "React.js", "JavaScript ES6", "Bootstrap", "Material UI", "Chart.js"
+      ]
+    },
+    {
+      "name": "Databases",
+      "color": "#00f5ff",
+      "skills": [
+        "PostgreSQL", "MongoDB", "MySQL", "SQLite", "Firebase",
+        "IndexedDB", "ChromaDB", "Oracle XE"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "color": "#9b5de5",
+      "skills": [
+        "Docker", "AWS (EC2, Amplify, S3, RDS)", "GCP", "Snowflake"
+      ]
+    },
+    {
+      "name": "DevOps & Tools",
+      "color": "#f7b731",
+      "skills": [
+        "GitHub Actions", "Git", "Bash", "Linux", "Make", "Swagger",
+        "Postman", "Power BI", "Jira", "Selenium", "Jest"
+      ]
+    }
+  ]
+}

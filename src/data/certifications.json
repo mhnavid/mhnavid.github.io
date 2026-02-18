@@ -1,0 +1,29 @@
+{
+  "certifications": [
+    {
+      "name": "Advanced Certificate for Management Professionals (ACMP) 4.0",
+      "issuer": "IBA, University of Dhaka",
+      "date": "September 2023"
+    },
+    {
+      "name": "Software Product Management Specialization",
+      "issuer": "University of Alberta, Coursera",
+      "date": "April 2024"
+    },
+    {
+      "name": "Building Containerized Applications on AWS",
+      "issuer": "Amazon Web Services, Coursera",
+      "date": "May 2021"
+    },
+    {
+      "name": "Machine Learning",
+      "issuer": "Stanford University, Coursera",
+      "date": "October 2018"
+    },
+    {
+      "name": "Elements of AI",
+      "issuer": "University of Helsinki",
+      "date": "August 2018"
+    }
+  ]
+}

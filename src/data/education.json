@@ -1,0 +1,23 @@
+{
+  "education": [
+    {
+      "degree": "MSc International Software Systems Science",
+      "school": "Otto-Friedrich-Universität Bamberg",
+      "period": "Oct 2024 – Present",
+      "location": "Bamberg, Germany 🇩🇪",
+      "status": "Ongoing"
+    },
+    {
+      "degree": "MSc Computer Science & Engineering",
+      "school": "Jahangirnagar University",
+      "period": "Apr 2019 – Dec 2021",
+      "location": "Dhaka, Bangladesh"
+    },
+    {
+      "degree": "BSc Computer Science & Engineering",
+      "school": "American International University-Bangladesh (AIUB)",
+      "period": "Jan 2015 – Dec 2018",
+      "location": "Dhaka, Bangladesh"
+    }
+  ]
+}

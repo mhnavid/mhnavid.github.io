@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Head Blocks",
+      "location": "Dhaka, Bangladesh",
+      "period": "November 2017 – Present",
+      "highlights": [
+        "Real-time toll revenue management system: 20% efficiency improvement, 70% latency reduction",
+        "AI exam proctoring platform: 93% detection accuracy (Computer Vision)",
+        "eKYC solution: 73% reduction in manual verification and onboarding time",
+        "End-to-end RAG pipeline with LangChain, vector databases, LLMs, Docker",
+        "Technical leadership of cross-functional engineering and data annotation teams"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer (Consultant)",
+      "company": "Genweb2 Ltd.",
+      "location": "Dhaka, Bangladesh",
+      "period": "January 2022 – July 2023",
+      "highlights": [
+        "Real-time sign language recognition system: 72% accuracy in controlled environments",
+        "End-to-end ML data pipelines and HamNoSys-based gesture-to-animation mapping"
+      ]
+    },
+    {
+      "title": "Junior Software Engineer (Consultant)",
+      "company": "Directorate General of Health Services (MIS)",
+      "location": "Dhaka, Bangladesh",
+      "period": "January 2023 – April 2023",
+      "highlights": [
+        "Government digital health platform: Health ID generation and medical record access",
+        "Refactored legacy code across 9 backend services"
+      ]
+    },
+    {
+      "title": "Software Engineer (Part-time)",
+      "company": "SIGMIND.ai",
+      "location": "Dhaka, Bangladesh",
+      "period": "June 2020 – October 2020",
+      "highlights": [
+        "COVID-19 / face-mask compliance analytics dashboard (CCTV-derived data)",
+        "60% image loading improvement, 30% backend load reduction via AWS S3 + caching"
+      ]
+    },
+    {
+      "title": "RPA Engineer (Consultant)",
+      "company": "Prime Tech Solutions Ltd.",
+      "location": "Dhaka, Bangladesh",
+      "period": "January 2019 – June 2019",
+      "highlights": [
+        "Airline ticket booking RPA: 80% reduction in manual intervention",
+        "Selenium + Flask automation: 40% increase in agent efficiency"
+      ]
+    }
+  ]
+}

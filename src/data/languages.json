@@ -1,0 +1,14 @@
+{
+  "languages": [
+    {
+      "name": "English",
+      "level": "Fluent",
+      "rating": 4
+    },
+    {
+      "name": "Bengali",
+      "level": "Native",
+      "rating": 5
+    }
+  ]
+}

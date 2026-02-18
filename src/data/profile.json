@@ -1,0 +1,19 @@
+{
+  "name": "MAHMUDUL HASSAN NAVID",
+  "displayName": "Mahmudul Hassan Navid",
+  "greeting": "Hi! I am",
+  "title": "Senior Software Engineer | AI & ML Engineer",
+  "location": "Bamberg, Germany",
+  "email": "mahmudulhassannavid@gmail.com",
+  "social": {
+    "github": "https://github.com/mhnavid",
+    "linkedin": "https://linkedin.com/in/mahmudul-hassan-navid",
+    "medium": "https://medium.com/@mahmudulhassannavid"
+  },
+  "roles": [
+    "Senior Software Engineer",
+    "AI & ML Engineer",
+    "Full-Stack Developer",
+    "An Enthusiastic Learner"
+  ]
+}
