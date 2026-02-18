@@ -60,51 +60,53 @@ const Navigation = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  // Calculate position for each menu item stacked vertically above the button
+  const getMenuItemStyle = (index: number) => {
+    // Stack items vertically above the button
+    // Each item is positioned higher (negative Y)
+    const itemHeight = 50; // Height of each menu item plus gap
+    const offset = (index + 1) * itemHeight;
+
+    return {
+      '--y': `${-offset}px`,
+      '--delay': `${index * 50}ms`
+    } as React.CSSProperties;
+  };
+
   return (
     <>
-      {/* Hidden corner button - bottom right */}
-      <button
-        className={`nav-toggle-btn ${isMenuOpen ? 'open' : ''}`}
-        onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
-        aria-expanded={isMenuOpen}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      {/* Radial navigation container */}
+      <div className={`radial-nav ${isMenuOpen ? 'open' : ''}`}>
+        {/* Center toggle button */}
+        <button
+          className="nav-toggle-btn"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="menu-icon">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="close-icon">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
 
-      {/* Floating menu overlay */}
-      <div className={`floating-nav-menu ${isMenuOpen ? 'open' : ''}`}>
-        <nav className="nav">
-          <div className="nav-header">
-            <span className="nav-title">Navigation</span>
-            <button
-              className="nav-close-btn"
-              onClick={() => setIsMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <ul className="nav-links">
-            {sections.map((section) => (
-              <li key={section.id}>
-                <button
-                  onClick={() => scrollToSection(section.id)}
-                  className={`nav-link ${activeSection === section.id ? 'active' : ''}`}
-                  aria-label={`Navigate to ${section.label}`}
-                >
-                  <span className="nav-link-icon">●</span>
-                  <span className="nav-link-text">{section.label}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* Radial menu items */}
+        {sections.map((section, index) => (
+          <button
+            key={section.id}
+            className={`radial-menu-item ${isMenuOpen ? 'visible' : ''} ${
+              activeSection === section.id ? 'active' : ''
+            }`}
+            style={getMenuItemStyle(index)}
+            onClick={() => scrollToSection(section.id)}
+            aria-label={`Navigate to ${section.label}`}
+            title={section.label}
+          >
+            <span className="radial-label">{section.label}</span>
+          </button>
+        ))}
       </div>
     </>
   );

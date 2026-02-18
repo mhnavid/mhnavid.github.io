@@ -496,10 +496,16 @@ input:focus, textarea:focus {
 }
 
 /* Floating Navigation with Corner Button */
-.nav-toggle-btn {
+.radial-nav {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+}
+
+.nav-toggle-btn {
   width: 60px;
   height: 60px;
   background: var(--bg-secondary);
@@ -507,13 +513,12 @@ input:focus, textarea:focus {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  z-index: 1000;
   transition: all 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .nav-toggle-btn:hover {
@@ -522,191 +527,109 @@ input:focus, textarea:focus {
   box-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
 }
 
-.nav-toggle-btn span {
-  width: 24px;
-  height: 2px;
-  background: var(--accent-cyan);
-  border-radius: 2px;
+.nav-toggle-btn .menu-icon,
+.nav-toggle-btn .close-icon {
+  position: absolute;
   transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-.nav-toggle-btn.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.nav-toggle-btn.open span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-
-.nav-toggle-btn.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.floating-nav-menu {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 999;
-  transition: all 0.4s ease;
-}
-
-.floating-nav-menu.open {
-  pointer-events: auto;
-}
-
-.floating-nav-menu::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.floating-nav-menu.open::before {
-  opacity: 1;
-}
-
-.floating-nav-menu .nav {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  width: 90%;
-  max-width: 400px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--accent-cyan);
-  border-radius: 16px;
-  padding: 2rem;
-  opacity: 0;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 50px rgba(0, 245, 255, 0.3);
-}
-
-.floating-nav-menu.open .nav {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(0, 245, 255, 0.2);
-}
-
-.nav-title {
-  font-family: 'Orbitron', monospace;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   color: var(--accent-cyan);
 }
 
-.nav-close-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid var(--text-muted);
-  color: var(--text-muted);
+.nav-toggle-btn .close-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+.radial-nav.open .nav-toggle-btn .menu-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+.radial-nav.open .nav-toggle-btn .close-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.radial-menu-item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 130px;
+  height: 44px;
+  background: rgba(13, 17, 23, 0.98);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--accent-violet);
+  border-radius: 22px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.nav-close-btn:hover {
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
-  background: rgba(0, 245, 255, 0.1);
-}
-
-.nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.nav-link {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  border-radius: 8px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: all 0.3s ease;
-  text-align: left;
-}
-
-.nav-link:hover {
-  background: rgba(0, 245, 255, 0.1);
-}
-
-.nav-link.active {
-  background: rgba(0, 245, 255, 0.15);
-  border: 1px solid var(--accent-cyan);
-}
-
-.nav-link-icon {
-  font-size: 0.5rem;
-  color: var(--accent-cyan);
+  padding: 0 1.2rem;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.3);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 0 20px rgba(155, 93, 229, 0.4);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-.nav-link:hover .nav-link-icon,
-.nav-link.active .nav-link-icon {
+.radial-menu-item.visible {
   opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, calc(-50% + var(--y))) scale(1);
+  pointer-events: auto;
+  transition-delay: var(--delay);
 }
 
-.nav-link.active .nav-link-icon {
-  font-size: 0.75rem;
+.radial-menu-item:hover {
+  background: rgba(155, 93, 229, 0.3);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+  transform: translate(-50%, calc(-50% + var(--y))) scale(1.05);
+  transition-delay: 0s !important;
+  z-index: 10;
 }
 
-.nav-link-text {
+.radial-menu-item.active {
+  background: rgba(0, 245, 255, 0.25);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.7);
+}
+
+.radial-label {
+  font-size: 0.85rem;
   font-family: 'Orbitron', monospace;
-  font-size: 1rem;
-  color: var(--text-primary);
-  transition: color 0.3s ease;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
 }
 
-.nav-link:hover .nav-link-text,
-.nav-link.active .nav-link-text {
+.radial-menu-item:hover .radial-label,
+.radial-menu-item.active .radial-label {
   color: var(--accent-cyan);
 }
 
 @media (max-width: 768px) {
-  .nav-toggle-btn {
+  .radial-nav {
     bottom: 1.5rem;
     right: 1.5rem;
+  }
+
+  .nav-toggle-btn {
     width: 50px;
     height: 50px;
   }
 
-  .nav-toggle-btn span {
-    width: 20px;
+  .radial-menu-item {
+    min-width: 80px;
+    height: 36px;
+    padding: 0 0.75rem;
   }
 
-  .floating-nav-menu .nav {
-    width: 85%;
-    padding: 1.5rem;
-  }
-
-  .nav-link-text {
-    font-size: 0.9rem;
+  .radial-label {
+    font-size: 0.7rem;
   }
 }
 
@@ -718,10 +641,7 @@ input:focus, textarea:focus {
     animation: none;
   }
   .nav-toggle-btn,
-  .nav-close-btn,
-  .nav-link,
-  .floating-nav-menu,
-  .floating-nav-menu::before {
+  .radial-menu-item {
     transition: none;
   }
 }
